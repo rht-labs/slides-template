@@ -1,0 +1,87 @@
+/**
+ * Open Innovation Labs theme for reveal.js.
+ *
+ * 
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(http://overpass-30e2.kxcdn.com/overpass.css);
+@import url(http://overpass-30e2.kxcdn.com/overpass-mono.css);
+
+// Override theme settings (see ../template/settings.scss)
+// Colour selection of RH 
+// Toggle headings, links and text fone as needed
+
+// REDS
+$redHatRed: #cc0000;
+$redHatDarkRed: #A30000;
+$redHatDarkestRed: #820000;
+
+// BLUES (secondary brand colours)
+$redHatBlue: #004153;
+$redHatLightBlue: #A3DBE8;
+
+// Greys
+$redHatDarkGrey: #4c4c4c;
+$redHatLightGrey: #dcdcdc;
+
+
+
+$headingColor: $redHatBlue;
+$linkColor: $redHatRed;
+$linkColorHover: $redHatDarkestRed;
+$selectionBackgroundColor: $redHatBlue;
+$mainColor: $redHatDarkGrey;
+$backgroundColor: $redHatLightGrey;
+
+$mainFontSize: 38px;
+$mainFont: 'Overpass', sans-serif, 'thin';
+$headingFont: 'Overpass', sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+// $linkColorHover: lighten( $linkColor, 15% );
+// $selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+// section.has-dark-background {
+// 	&, h1, h2, h3, h4, h5, h6 {
+// 		color: $redHatDarkRed;
+// 	}
+// }
+
+@mixin bodyBackground() {
+    background: $backgroundColor;
+}
+
+#left-logo {
+    position: absolute;
+    left: 150px;
+    bottom: 20px;
+}
+
+#right-logo {
+    position: absolute;
+    right: 150px;
+    bottom: 20px;
+}
+
+.image-row {
+    display: inline-flex;
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
